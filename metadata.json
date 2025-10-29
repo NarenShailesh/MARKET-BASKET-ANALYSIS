@@ -1,0 +1,5 @@
+{
+  "name": "Copy of AI Market Basket Analysis",
+  "description": "An AI-driven Market Basket Analysis (MBA) application that processes uploaded retail transaction data and visualizes actionable association rules using charts and tables.",
+  "requestFramePermissions": []
+}
