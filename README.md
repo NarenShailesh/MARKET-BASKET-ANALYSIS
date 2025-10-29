@@ -1,20 +1,9 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1SQg9VNH_w4Eg0w_X2Bxk2bc1yeRAfktK
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+🛍️ AI-Driven Market Basket Analysis (MBA) SystemProject OverviewThis project implements a full-stack, predictive analytical system designed to empower retail managers with actionable intelligence derived from transactional data. By leveraging efficient data mining algorithms and a modern web interface, the system identifies and visualizes hidden purchasing patterns, specifically supporting decisions related to cross-selling, product bundling, and inventory optimization.The solution transforms raw sales records into quantified association rules (using metrics like Lift and Confidence), delivered via an interactive dashboard and a real-time conversational chatbot.🚀 FeaturesCore Analytical EngineAssociation Rule Mining: Utilizes the industry-standard Apriori Algorithm to extract frequent itemsets and generate association rules from transactional data.Actionability Metrics: Filters and ranks rules based primarily on the Lift Ratio to identify non-obvious, high-value correlations, ensuring strategic relevance.Data Processing Pipeline: Features an optimized Python backend using Pandas for efficient data cleaning and transformation into the necessary one-hot encoded matrix format.User Interface & PredictionInteractive Dashboard (React): A responsive web interface allowing users to upload transaction data and dynamically set analytical parameters (Minimum Support, Minimum Confidence).Advanced Visualization: Includes a Lift vs. Confidence Scatter Plot for holistic rule evaluation and a Network Graph to visually map strong product associations for intuitive placement decisions.Predictive Chatbot: A conversational assistant that allows users to query the rule base in plain language (e.g., "If a customer buys product X, what is the best recommendation?"), providing instant, quantified predictions.🛠️ Technology StackThis application is built as a three-tier architecture combining high-performance computing with modern web presentation.LayerTechnologyPurposeFrontend (Presentation)React (JavaScript/TS)Interactive dashboard, dynamic charting, and user interface.Backend (Application Logic)Python (FastAPI)High-performance API gateway, handling HTTP requests and routing analysis.Analytical CorePandas, NumPy, mlxtendData cleaning, matrix transformation, and execution of the Apriori algorithm.Data ContractJSONStandardized data exchange format between the Python API and the React frontend.⚙️ Installation and SetupPrerequisitesYou will need the following installed on your system:Python 3.8+ (for the backend)Node.js & npm (for the frontend)1. Backend SetupClone the repository:Bashgit clone [YOUR-REPO-URL]
+cd [YOUR-REPO-NAME]
+Create and activate a Python virtual environment:Bashpython -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+Install the required Python dependencies:Bashpip install -r requirements.txt
+Run the FastAPI backend server:Bashuvicorn app:app --reload
+(The backend API will be available, typically at http://127.0.0.1:8000)2. Frontend SetupNavigate to the frontend directory (e.g., cd frontend).Install Node dependencies:Bashnpm install
+Start the React development server:Bashnpm run dev
+(The web application will open in your browser, typically at http://localhost:5173)🤝 ContributionThis project is open-source and welcomes contributions, feature suggestions, and bug reports. Feel free to open an issue or submit a pull request!LicenseThis project is licensed under the MIT License.
